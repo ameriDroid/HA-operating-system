@@ -3,7 +3,7 @@ set -e
 
 channel=$1
 
-APPARMOR_URL="https://version.home-assistant.io/apparmor.txt"
+APPARMOR_URL="https://https://ameridroid.github.io/HA-version/apparmor.txt"
 
 # Make sure we can talk to the Docker daemon
 echo "Waiting for Docker daemon..."
