@@ -34,7 +34,7 @@ jobs:
       version_full: ${{ steps.version.outputs.version_full }}
       channel: ${{ steps.channel.outputs.channel }}
       matrix: ${{ steps.generate_matrix.outputs.result }}
-      build_container_image: ghcr.io/home-assistant/haos-builder@${{ steps.build_haos_builder.outputs.digest }}
+      build_container_image: ghcr.io/ameridroid/haos-builder@${{ steps.build_haos_builder.outputs.digest }}
       publish_build: ${{ steps.check_publish.outputs.publish_build }}
       self_signed_cert: ${{ steps.generate_signing_key.outputs.self_signed_cert }}
     steps:
@@ -48,7 +48,7 @@ jobs:
         env:
           PUBLISH_FLAG: ${{ inputs.publish }}
         run: |
-          if [ "${{ github.repository }}" == "home-assistant/operating-system" ]; then
+          if [ "${{ github.repository }}" == "ameriDroid/HA-operating-system" ]; then
             if [ "${PUBLISH_FLAG}" != "true" ] && [ "${{ github.event_name }}" != "release" ]; then
               echo "publish_build=false" >> "$GITHUB_OUTPUT"
             else
