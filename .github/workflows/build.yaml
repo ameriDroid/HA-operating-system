@@ -149,8 +149,8 @@ jobs:
         with:
           context: .
           file: Dockerfile
-          tags: ghcr.io/home-assistant/haos-builder
-          cache-from: ghcr.io/home-assistant/haos-builder:cache-${{ steps.version.outputs.version_main }}
+          tags: ghcr.io/ameridroid/haos-builder
+          cache-from: ghcr.io/ameridroid/haos-builder:cache-${{ steps.version.outputs.version_main }}
           cache-to: ghcr.io/ameridroid/haos-builder:cache-${{ steps.version.outputs.version_main }}
           push: true
 
